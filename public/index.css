@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Sketchetica";
+  src: local("Sketchetica"), url("Sketchetica Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CabinSketch";
+  src: local("CabinSketch"), url("CabinSketch-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Walter Turncoat";
+  src: local("Walter Turncoat"), url("walterturncoat.ttf") format("truetype");
+}

@@ -1,0 +1,79 @@
+{
+  "name": "react-native-web-redux-ts-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "i18next": "^12.0.0",
+    "react": "^16.4.2",
+    "react-art": "^16.6.3",
+    "react-dom": "^16.4.2",
+    "react-i18next": "^8.3.5",
+    "react-native-web": "^0.8.9",
+    "react-redux": "5.0.6",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^0.16.2",
+    "reduxsauce": "^1.0.0",
+    "seamless-immutable": "^7.1.4",
+    "typesafe-actions": "^2.0.4",
+    "yarn": "^1.12.3"
+  },
+  "scripts": {
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/react": "^16.4.8",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-native": "^0.55.28",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/redux-persist": "^4.3.1",
+    "@types/seamless-immutable": "^7.1.4",
+    "babel-core": "^6.26.3",
+    "babel-plugin-react-native-web": "^0.8.9",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^23.6.0",
+    "jest-canvas-mock": "^1.1.0",
+    "parcel-bundler": "^1.9.7",
+    "prompt": "^1.0.0",
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "^16.6.3",
+    "request-promise": "^4.2.2",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.0.1"
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ],
+    "plugins": [
+      "react-native-web"
+    ]
+  },
+  "jest": {
+    "preset": "react-native-web",
+    "transform": {
+      "^.+\\.js$": "./jest_preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

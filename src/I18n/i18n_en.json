@@ -1,0 +1,14 @@
+{
+  "ButtonLabels": {
+    "aboutButton": "Go to About",
+    "homeButton": "Go to Home"
+  },
+  "Home": {
+    "descriptionTitle": "Home",
+    "descriptionText": "This is a test."
+  },
+  "About": {
+    "descriptionTitle": "About",
+    "descriptionText": "This is some text describing things."
+  }
+}
