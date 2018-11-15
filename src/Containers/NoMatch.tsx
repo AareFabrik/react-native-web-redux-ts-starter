@@ -4,14 +4,11 @@ import {
   StyleSheet,
   Text,
   TextStyle,
-  View,
   ViewStyle
 } from "react-native";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import Title from "../Components/Title";
-import I18n, { Terms } from "../I18n";
-import { Language } from "../Store/Settings/Types";
+import { Language } from "../Store/Types";
 
 interface Props {
   language: Language;
@@ -19,23 +16,17 @@ interface Props {
 
 interface State {}
 
-export class About extends React.Component<Props, State> {
+export class NoMatch extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
-      <ScrollView style={styles.scrollView}>
-        <Title title={I18n.t(Terms.About.descriptionTitle)} />
-        <Text style={styles.text}> {I18n.t(Terms.About.descriptionText)}</Text>
-        <View style={{}}>
-          <Link to="/">
-            <Text style={styles.text}>
-              {I18n.t(Terms.ButtonLabels.homeButton)}
-            </Text>
-          </Link>
-        </View>
+      <ScrollView style={styles.container}>
+        <Title title={"404"} />
+        <Text style={styles.text}>{"Page not found."}</Text>
       </ScrollView>
     );
   }
@@ -52,15 +43,15 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(About);
+)(NoMatch);
 
 interface Style {
-  scrollView: ViewStyle;
+  container: ViewStyle;
   text: TextStyle;
 }
 
 const styles = StyleSheet.create<Style>({
-  scrollView: {
+  container: {
     flex: 1,
     width: "100%",
     backgroundColor: "white"

@@ -1,13 +1,14 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { connect } from "react-redux";
-import { Route, withRouter, Link } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Header from "../Components/Header";
-import I18n, { Terms } from "../I18n";
+import I18n from "../I18n";
 import { Actions, ApplicationState } from "../Store/index";
 import { Language } from "../Store/Types";
 import About from "./About";
 import Home from "./Home";
+import NoMatch from "./NoMatch";
 
 export interface Props {
   history: any;
@@ -50,8 +51,6 @@ export class Main extends React.Component<Props, State> {
   };
 
   render() {
-    let { language } = this.props;
-    console.log(language);
     return (
       <View style={styles.main}>
         <Header
@@ -60,8 +59,11 @@ export class Main extends React.Component<Props, State> {
         />
 
         <View style={styles.routeContainer}>
-          <Route exact={true} path="/" component={Home} />
-          <Route path="/about/" component={About} />
+          <Switch>
+            <Route exact={true} path="/" component={Home} />
+            <Route path="/about/" component={About} />
+            <Route component={NoMatch} />} />
+          </Switch>
         </View>
       </View>
     );
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
   },
   routeContainer: {
     width: "100%",
-    padding: "1em"
+    padding: 20
   },
   title: {
     color: "green"

@@ -11,6 +11,7 @@ This is a starter for react-native-web including:
 - loading custom fonts
 - seamless-immutable
 - hover components
+- 404 page
 
 ## Getting Started
 
@@ -34,6 +35,10 @@ Production sources build into `/dist`.
   - [react-redux-typescript-example](https://github.com/resir014/react-redux-typescript-example)
 - This project was bootstrapped with [Parcel](https://parceljs.org).
 - And also, customize with [React Native for Web](https://github.com/necolas/react-native-web).
+
+## FAQ & Infos
+
+- [react-router](https://github.com/ReactTraining/react-router/blob/master/FAQ.md#why-doesnt-my-application-render-after-refreshing)
 
 ## TODO
 
